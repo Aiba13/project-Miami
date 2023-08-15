@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button id="searchButton">Search</button>
+    </div>
+    <div class="swiper slider slider_main">
+      <div class="swiper-wrapper slider__wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide slider__item">
+          <img class="slider__img" src="path/to/image1.jpg" alt="Cityscape 1" />
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide slider__item">
+          <img class="slider__img" src="path/to/image2.jpg" alt="Cityscape 2" />
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide slider__item">
+          <img class="slider__img" src="path/to/image3.jpg" alt="Cityscape 3" />
+        </div>
+        <!-- ... Add more slides as needed -->
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="logo">Miami</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+        deleniti nisi maxime ipsa temporibus obcaecati totam recusandae illo
+        minus. Placeat nulla iusto illum nemo voluptas doloremque ab similique
+        cupiditate rerum.
+      </p>
+    </div>
+
+    <div class="swiper slider slider_main">
+      <div class="swiper-wrapper slier__wrapper"></div>
+    </div>
+
+    <div class="swiper slider slider_bg">
+      <div class="swiper-wrapper slier__wrapper"></div>
+    </div>
+	<div class="contacts">
+		<h2>Contact Us</h2>
+		<p>If you have any questions or inquiries, feel free to get in touch with us:</p>
+		<ul>
+			<li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
+			<li>Phone: <a href="tel:996 999 999 999">+1 (234) 567-890</a></li>
+			<li>Address: Codingiseazy</li>
+		</ul>
+	</div>
+	
+
+<div class="contacts">
+    
+</div>
+
+<script src="libs/swiper/swiper-bundle.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
+
+	
+
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const sliderItems = document.querySelectorAll(".slider__item");
+
+        searchButton.addEventListener("click", function () {
+          const searchText = searchInput.value.toLowerCase();
+
+          sliderItems.forEach(function (item) {
+            const imageAltText = item
+              .querySelector(".slider__img")
+              .getAttribute("alt");
+            if (imageAltText.toLowerCase().includes(searchText)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
